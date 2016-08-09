@@ -14,6 +14,8 @@ import {
 import Style from './style';
 import Moment from 'moment';
 
+import Icon from 'react-native-vector-icons/Ionicons';
+
 const FORMATS = {
   'date': 'YYYY-MM-DD',
   'datetime': 'YYYY-MM-DD HH:mm',
@@ -235,10 +237,11 @@ class DatePicker extends Component {
           <View style={dateInputStyle}>
             {this.getTitleElement()}
           </View>
-          {this.props.showIcon && <Image
-            style={[Style.dateIcon, customStyles.dateIcon]}
-            source={this.props.iconSource}
-          />}
+          {this.props.showIcon &&
+            <View style={customStyles.dateIcon}>
+              <Icon name='ios-calendar-outline' size={25} style={customStyles.dateIconColor} />
+            </View>
+          }
           {Platform.OS === 'ios' && <Modal
             transparent={true}
             visible={this.state.modalVisible}
