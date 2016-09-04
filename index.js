@@ -15,6 +15,7 @@ import Style from './style';
 import Moment from 'moment';
 
 import Icon from 'react-native-vector-icons/Ionicons';
+import dismissKeyboard from 'react-native/Libraries/Utilities/dismissKeyboard'
 
 const FORMATS = {
   'date': 'YYYY-MM-DD',
@@ -226,7 +227,7 @@ class DatePicker extends Component {
       this.state.disabled && Style.disabled,
       this.state.disabled && customStyles.disabled
     ];
-
+    dismissKeyboard()
     return (
       <TouchableHighlight
         style={[Style.dateTouch, this.props.style]}
