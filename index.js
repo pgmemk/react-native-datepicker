@@ -185,6 +185,7 @@ class DatePicker extends Component {
     });
 
     if (Platform.OS === 'ios') {
+      dismissKeyboard()
       this.setModalVisible(true);
     } else {
 
@@ -227,7 +228,6 @@ class DatePicker extends Component {
       this.state.disabled && Style.disabled,
       this.state.disabled && customStyles.disabled
     ];
-    dismissKeyboard()
     return (
       <TouchableHighlight
         style={[Style.dateTouch, this.props.style]}
