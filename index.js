@@ -265,6 +265,7 @@ class DatePicker extends Component {
                   <DatePickerIOS
                     date={this.state.date}
                     mode={this.props.mode}
+                    locale={this.props.locale}
                     minimumDate={this.props.minDate && this.getDate(this.props.minDate)}
                     maximumDate={this.props.maxDate && this.getDate(this.props.maxDate)}
                     onDateChange={(date) => this.setState({date: date})}
@@ -331,7 +332,8 @@ DatePicker.propTypes = {
   showIcon: PropTypes.bool,
   disabled: PropTypes.bool,
   onDateChange: PropTypes.func,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  locale: PropTypes.string
 };
 
 export default DatePicker;
