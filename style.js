@@ -45,14 +45,14 @@ let style = StyleSheet.create({
     position: 'absolute',
     top: 0,
     height: 42,
-    padding: 20,
+    padding: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center'
   },
   btnTextText: {
     fontSize: 16,
-    color: '#46cf98'
+    color: '#7AAAC3'
   },
   btnTextCancel: {
     color: '#666'
